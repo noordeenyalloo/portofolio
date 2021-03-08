@@ -1,0 +1,64 @@
+ /* my skills */
+
+ .personal-skills {
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+ }
+
+ .personal-skill-list {
+    list-style: none;
+    display: flex;
+    font-size: 10rem;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+ }
+
+ .personal-skill-list li {
+     margin-left: 2rem;
+ }
+ .personal-skill-list p {
+     text-align: center;
+ }
+
+ .checked {
+    color: #38a1f3;
+  }
+
+  .fa-php,
+  .fa-database,
+  .fa-html5,
+  .fa-css3-alt,
+  .fa-js-square
+  {
+      color: #444;
+      opacity: .5;
+      transition: color 650ms;
+      -webkit-transition: color 650ms;
+      -moz-transition: color 650ms;
+      -ms-transition: color 650ms;
+      -o-transition: color 650ms;
+}
+  .fa-php:hover {
+    color: #8892be;
+  }
+
+  .fa-database:hover {
+      color: #f29111;
+  }
+
+  .fa-html5:hover {
+      color: #e34f26;
+  }
+
+  .fa-css3-alt:hover {
+    color: #002561;
+  }
+
+  .fa-js-square:hover {
+      color: #f7df1e;
+  }
+ /* end my skills */
