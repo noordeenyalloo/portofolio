@@ -11,6 +11,8 @@ import { PortoServicesComponent } from './porto/porto-services/porto-services.co
 import { PortfolioComponent } from './porto/portfolio/portfolio.component';
 import { ExperienceComponent } from './porto/experience/experience.component';
 import { PortoServiceComponent } from './porto/porto-services/porto-service/porto-service.component';
+import { RegisterComponent } from './users/register/register.component';
+import { MainPageComponent } from './porto/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PortoServiceComponent } from './porto/porto-services/porto-service/port
     PortoServicesComponent,
     PortfolioComponent,
     ExperienceComponent,
-    PortoServiceComponent
+    PortoServiceComponent,
+    RegisterComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

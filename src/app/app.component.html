@@ -1,71 +1,60 @@
-
 <!-- start Header -->
-    <header>
-      <div class="menu-toggler" [class.open]="classOpen" (click)='togglenav()' #menuToggler>
-        <div class="bar half start"></div>
-        <div class="bar"></div>
-        <div class="bar half end"></div>
-      </div>
-      <nav class="top-nav" [class.open]="classOpen" #topNav>
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="#education" class="nav-link">education</a></li>
-          <li><a href="#skills" class="nav-link">skills</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="landing-text">
-        <h1>Noureddin dheifallah</h1>
-        <h6>i make things that make people happy</h6>
-        <div class="my-photo">
-            <img class="photo" src="assets/images/noor.jpg" alt="">
-        </div>
+<header>
+  <div class="menu-toggler" [class.open]="classOpen" (click)='togglenav()' #menuToggler>
+    <div class="bar half start"></div>
+    <div class="bar"></div>
+    <div class="bar half end"></div>
+  </div>
+  <nav class="top-nav" [class.open]="classOpen" #topNav>
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="#education" class="nav-link">education</a></li>
+      <li><a href="#skills" class="nav-link">skills</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a routerLink="Register" class="nav-link">Register</a></li>
+    </ul>
+  </nav>
+  <!--<div class="landing-text">
+    <h1>Noureddin dheifallah</h1>
+    <h6>i make things that make people happy</h6>
+    <div class="my-photo">
+      <img class="photo" src="assets/images/noor.jpg" alt="">
     </div>
-    </header>
-    <!-- Start color changer -->
-    <div class="color-container" (click)="greenThemeButtonOnclick()" id="color-picker">
-        <button id="green-theme"> </button>
-        <!--<button id="threeD-theme"> </button>-->
+  </div>-->
+</header>
+<!-- Start color changer -->
+<div class="color-container" (click)="greenThemeButtonOnclick()" id="color-picker">
+  <button id="green-theme"> </button>
+  <!--<button id="threeD-theme"> </button>-->
+</div>
+
+<!--  -->
+<router-outlet></router-outlet>
+<!--  -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <h1>Contact</h1>
+      <h6>Lets Work together</h6>
     </div>
-    <!-- End color changer -->
-    <app-about-me></app-about-me>
-    <!-- education -->
-    <app-educations></app-educations>
-    <!-- My Programming Skills  -->
-    <app-skills></app-skills>
-    <!-- exp -->
-    <app-experience></app-experience>
-    <!-- services  -->
-    <app-porto-services></app-porto-services>
-    <!--  -->
-    <app-portfolio></app-portfolio>
-    <!--  -->
-    
-    <!--  -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Contact</h1>
-                <h6>Lets Work together</h6>
-            </div>
-            <div class="contact-me">
-                <ul class="contact-list">
-                    <li><i class="fab fa-whatsapp"></i> +(962)797818872</li>
-                    <li><i class="fas fa-envelope-open"></i> noordeenyalloo@gmail.com</li>
-                </ul>
-                <a class ="sown-cv" href="assets/data/Noureddin's Resume.pdf" download="noureddin-cv" target="_blank">Download Cv</a>
-            </div>
-        </div>  
-    </section>    
-    <!--  -->
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-        <p>&copy; 2020 Noureddin Dheif Allah</p>
-    </footer>
+    <div class="contact-me">
+      <ul class="contact-list">
+        <li><i class="fab fa-whatsapp"></i> +(962)797818872</li>
+        <li><i class="fas fa-envelope-open"></i> noordeenyalloo@gmail.com</li>
+      </ul>
+      <a class="sown-cv" href="assets/data/Noureddin's Resume.pdf" download="noureddin-cv" target="_blank">Download Cv</a>
+    </div>
+  </div>
+</section>
+<!--  -->
+<footer class="copyright">
+  <div class="up" id="up">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+  <p>&copy; 2020 Noureddin Dheif Allah</p>
+</footer>
 
