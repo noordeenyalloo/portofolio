@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\users\\register"
+    "\\src\\app\\porto",
+    "\\src\\app\\users"
   ],
-  "SelectedNode": "\\src\\app\\porto",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

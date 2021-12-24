@@ -1,202 +1,51 @@
+
 <div class="container">
 
-  <form (ngSubmit)="onSubmit(RegForm.value, RegForm.valid)" #RegForm="ngForm">
+  <p>profile works!</p>
 
-    <div class="row">
-      <div class="col-sm-2">
-        *Username :
-      </div>
-      <div class="col-sm-4">
-        <input type="text" required #txtUsername="ngModel" placeholder="Username" name="txtUsername" ngModel />
-      </div>
-      <div *ngIf="txtUsername.invalid && isSubmited">
-        <span class="alert">
-          the username is mandatory
-        </span>
-      </div>
-    </div>
-  
-  <div class="row">
-    <div class="col-sm-2">
-      *Password :
-    </div>
-    <div class="col-sm-4">
-      <input type="password" required #txtPassword placeholder="Password" name="txtPassword" ngModel />
-    </div>
-    <div *ngIf="txtPassword.value == '' && isSubmited">
-      <span class="alert">
-        The Password is mandatory
-      </span>
-    </div>
-    
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Confirm Password :
-    </div>
-    <div class="col-sm-4">
-      <input type="password" required #txtConfirmPassword placeholder="Confirm Password" name="txtConfirmPassword" ngModel />
-    </div>
-    <div *ngIf="txtConfirmPassword.value != txtPassword.value">
-      <span class="alert">
-        The Confirm Password is not matched
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Name :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtName placeholder="Name" name="txtName" ngModel />
-    </div>
-    <div *ngIf="txtName.value == '' && isSubmited">
-      <span class="alert">
-        The Name is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Fathar Name :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtFatherName placeholder="Fathar Name" name="txtFatherName" ngModel />
-    </div>
-    <div *ngIf="txtFatherName.value == '' && isSubmited">
-      <span class="alert">
-        The Father Name is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      Grand Fathar Name :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" #txtGrandFatharName placeholder="Grand Fathar Name" name="txtGrandFatharName" ngModel />
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Family Name :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtFamilyName placeholder="Family Name" name="txtFamilyName" ngModel />
-    </div>
-    <div *ngIf="txtFamilyName.value == '' && isSubmited">
-      <span class="alert">
-        The Family Name is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Phone Nmber :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtPhoneNmber placeholder="Phone Nmber" name="txtPhoneNmber" ngModel />
-    </div>
-    <div *ngIf="txtPhoneNmber.value == '' && isSubmited">
-      <span class="alert">
-        The Phone Nmber is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Birth Date :
-    </div>
-    <div class="col-sm-4">
-      <input type="date" required #dateBirthDate name="dateBirthDate" ngModel />
-    </div>
-    <div *ngIf="txtPhoneNmber.value == '' && isSubmited">
-      <span class="alert">
-        The Birth Date is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      Gender :
-    </div>
-    <div class="col-sm-4">
-      <select required #ddlGender placeholder="Gender" name="ddlGender" ngModel>
-        <option value="Male" selected>
-          Male
-        </option>
-        <option value="Female">
-          Female
-        </option>
-      </select>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *Email :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtEmail placeholder="Email" name="txtEmail" ngModel />
-    </div>
-    <div *ngIf="txtEmail.value == '' && isSubmited">
-      <span class="alert">
-        The Email is mandatory
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      Slogan :
-    </div>
-    <div class="col-sm-4">
-      <input type="text" required #txtSlogan placeholder="Slogan" name="txtSlogan" ngModel />
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      *About Me :
-    </div>
-    <div class="col-sm-4">
-      <textarea type="text" required #txtAboutMe placeholder="AboutMe" name="txtAboutMe" ngModel></textarea>
-    </div>
-    <div *ngIf="txtAboutMe.value == '' && isSubmited">
-      <span class="alert">
-        Please wright any thing about your self
-      </span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-4">
-      <input type="submit" value="Save"/>             
-    </div>
-  </div>
-
-
-
-  <!--<br />
+  <br />
   <br />
   --------------------------------------------- Education ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Education -->
-  <!--<div class="row">
+  <br />
+  <!--<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>-->
+
+  <div class="d-inline-block">
+    <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor >Toggle dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownManual">
+      <button ngbDropdownItem>Action - 1</button>
+      <button ngbDropdownItem>Another Action</button>
+      <button ngbDropdownItem>Something else is here</button>
+    </div>
+  </div>
+  
+  <button class="btn btn-outline-success mr-2">Open from outside</button>
+  <button class="btn btn-outline-danger mr-2">Close from outside</button>
+
+  
+  <div class="row">
     <div class="col-sm-2">
       Organization Name :
     </div>
     <div class="col-sm-4">
-      <input type="text" placeholder="ex : univirsity name" name="txtOrgName" #txtOrgName ngModel />
+      <input type="text" placeholder="univirsity name"/>
+    </div>
+  </div>
+
+  <br />
+  --------------------------------------------- Education ---------------------------------------------
+  <br />
+
+  <div class="row">
+    <div class="col-sm-2">
+      Organization Name :
+    </div>
+    <div class="col-sm-4">
+      <input type="text" placeholder="univirsity name" name="txtOrgName" #txtOrgName ngModel />
     </div>
   </div>
   <div class="row">
@@ -212,6 +61,11 @@
       Specialty :
     </div>
     <div class="col-sm-4">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
       <input type="text" placeholder="ex : computer sciences" name="txtSpecialty" #txtSpecialty ngModel />
     </div>
   </div>
@@ -220,18 +74,26 @@
       Degree :
     </div>
     <div class="col-sm-4">
-      <input type="text" placeholder="ex : Bachelor's, Master's" name="txtDegree" #txtDegree ngModel />-->
-  <!-- select option -->
-  <!--</div>
+      <!--<input type="text" placeholder="ex : Bachelor's, Master's" name="txtDegree" #txtDegree ngModel />
+      select option-->
+      <select name="ddlDegree" id="ddlDegree" #txtDegree ngModel>
+        <!--ngModel-->
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor">Bachelor</option>
+        <option value="Masters">Masters</option>
+        <option value="PhD">PhD</option>
+      </select>
+
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-2">
       Appreciation :
     </div>
     <div class="col-sm-4">
-      <input type="text" placeholder="ex : Good, Very Good" name="txtAppreciation" #txtAppreciation ngModel />-->
-  <!-- select option -->
-  <!--</div>
+      <input type="text" placeholder="ex : Good, Very Good" name="txtAppreciation" #txtAppreciation ngModel />
+      select option
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-2">
@@ -256,9 +118,9 @@
     <div class="col-sm-4">
       <input type="text" placeholder="ex : Bachelor of Computer Science" name="txtCertificate" #txtCertificate ngModel />
     </div>
-  </div>-->
-  <!--#region Graduation Project  -->
-  <!--<div class="row">
+  </div>
+
+  <div class="row">
     <div class="col-sm-2">
       Graduation Project :
     </div>
@@ -306,26 +168,26 @@
     <div class="col-sm-4">
       <input type="button" value="Add Education"
              (click)="SaveEducation(
-             txtOrgName.value,
-             txtOrgTitle.value,
-             txtSpecialty.value,
-             txtDegree.value,
-             txtAppreciation.value,
-             txtStartDate.value,
-             txtEndDate.value,
-             txtCertificate.value,
-             txtGraduationProject.value,
-             txtDescription.value)" />
+               txtOrgName.value,
+               txtOrgTitle.value,
+               txtSpecialty.value,
+               txtDegree.value,
+               txtAppreciation.value,
+               txtStartDate.value,
+               txtEndDate.value,
+               txtCertificate.value,
+               txtGraduationProject.value,
+               txtDescription.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
+  </div>
+
   <!--<br />
   <br />
   --------------------------------------------- Experience ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Experience -->
-  <!--<div class="row">
+  <br />
+  Experience
+  <div class="row">
     <div class="col-sm-2">
       Workplace :
     </div>
@@ -396,21 +258,21 @@
     <div class="col-sm-4">
       <input type="button" value="Add Experience"
              (click)="SaveExperience(
-             txtWorkplace.value,
-             txtTitle.value,
-             txtJobDescription.value,
-             txtJobStartDate.value,
-             txtJobEndDate.value)" />
+               txtWorkplace.value,
+               txtTitle.value,
+               txtJobDescription.value,
+               txtJobStartDate.value,
+               txtJobEndDate.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
+  </div>
+
+  <br />
   <br />
   --------------------------------------------- Image ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Image -->
-  <!--<div class="row">
+  <br />
+  Image
+  <div class="row">
     <div class="col-sm-2">
       Image Name :
     </div>
@@ -452,18 +314,18 @@
     <div class="col-sm-4">
       <input type="button" value="Add Image"
              (click)="SaveImage(
-             txtImageName.value,
-             imgURI.value)" />
+               txtImageName.value,
+               imgURI.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
+  </div>
+
+  <br />
   <br />
   --------------------------------------------- Portofolio ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Portofolio -->
-  <!--<div class="row">
+  <br />
+  Portofolio
+  <div class="row">
     <div class="col-sm-2">
       Project Name :
     </div>
@@ -531,21 +393,21 @@
     <div class="col-sm-4">
       <input type="button" value="Add Portofolio"
              (click)="SavePortofolio(
-             txtProjectName.value,
-             txtRole.value,
-             txtProjectImage.value,
-             txtProjectDescription.value,
-             txtProjectLink.value)" />
+               txtProjectName.value,
+               txtRole.value,
+               txtProjectImage.value,
+               txtProjectDescription.value,
+               txtProjectLink.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
+  </div>
+
+  <br />
   <br />
   --------------------------------------------- Services ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Services -->
-  <!--<div class="row">
+  <br />
+  Services
+  <div class="row">
     <div class="col-sm-2">
       Service Name :
     </div>
@@ -595,19 +457,19 @@
     <div class="col-sm-4">
       <input type="button" value="Add Service"
              (click)="SaveService(
-             txtServiceName.value,
-             txtServiceIcon.value,
-             txtServiceDescription.value)" />
+               txtServiceName.value,
+               txtServiceIcon.value,
+               txtServiceDescription.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
+  </div>
+
+  <br />
   <br />
   --------------------------------------------- SKILLS ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Skills -->
-  <!--<div class="row">
+  <br />
+  Skills
+  <div class="row">
     <div class="col-sm-2">
       Skill Name :
     </div>
@@ -665,20 +527,20 @@
     <div class="col-sm-4">
       <input type="button" value="Add Skill"
              (click)="SaveSkill(
-             txtSkillName.value,
-             txtSkillIcon.value,
-             txtSkillColorIcon.value,
-             txtSkillDegree.value)" />
+               txtSkillName.value,
+               txtSkillIcon.value,
+               txtSkillColorIcon.value,
+               txtSkillDegree.value)" />
     </div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
+  </div>
+
+  <br />
   <br />
   --------------------------------------------- SocialMedia ---------------------------------------------
   <br />
-  <br />-->
-  <!-- Skills -->
-  <!--<div class="row">
+  <br />
+  Skills
+  <div class="row">
     <div class="col-sm-2">
       SocialMedia Name :
     </div>
@@ -725,27 +587,19 @@
   <br />
 
   <div class="row">
-    <div class="col-sm-4">-->
-  <!--<input type="button" value="Add Social Media"
-  (click)="SaveSocialMedia(
-  txtSocialMediaName.value,
-  txtSocialMediaIcon.value,
-  txtSocialMediaColorIcon.value)" />-->
-  <!--</div>
-  </div>-->
-  <!--#endregion -->
-  <!--<br />
-  <br />
-  <br />
-  <br />
-  <br />
-
-  <div class="row">
     <div class="col-sm-4">
-      <input type="submit" value="Register" />
+      <input type="button" value="Add Social Media"
+             (click)="SaveSocialMedia(
+    txtSocialMediaName.value,
+    txtSocialMediaIcon.value,
+    txtSocialMediaColorIcon.value)" />
     </div>
-  </div>-->
+  </div>
 
-  </form>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />-->
 
 </div>

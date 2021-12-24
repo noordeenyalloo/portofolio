@@ -1,0 +1,42 @@
+<form (ngSubmit)="Login(RegForm.value, RegForm.valid)" #RegForm="ngForm">
+
+  <div class="login-panel">
+
+    <div class="row">
+      <div class="col-sm-2">
+        *Username :
+      </div>
+      <div class="col-sm-4">
+        <input type="text" #txtUsername placeholder="Username" name="txtUsername" ngModel />
+      </div>
+      <div *ngIf="txtUsername.value == '' && isSubmited">
+        <span class="alert">
+          the username is mandatory
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        *Password :
+      </div>
+      <div class="col-sm-4">
+        <input type="text" #txtPassword placeholder="Password" name="txtPassword" ngModel />
+      </div>
+      <div *ngIf="txtPassword.value == '' && isSubmited">
+        <span class="alert">
+          The Password is mandatory
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4" style="text-align: center;">
+        <input type="submit" name="btnSubmit" value="Login" style="margin-right:20px"/>
+        <input type="button" name="btnSubmit" value="Register" (click)="Register()" />
+      </div>
+    </div>
+
+  </div>
+
+ </form>
